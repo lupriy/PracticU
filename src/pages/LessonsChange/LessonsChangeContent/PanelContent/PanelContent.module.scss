@@ -1,0 +1,78 @@
+.block {
+  display: flex;
+  //margin-left: -41px;
+  //height: 28px;
+
+  position: relative;
+  @media (max-width: 890px) {
+    margin-left: 0;
+  }
+
+  &:hover .movingButtons {
+    opacity: 1;
+  }
+
+  .movingButtons {
+    display: flex;
+    opacity: 0;
+    margin-left: -70px;
+  }
+
+  .button1 {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    border-radius: 1px;
+    justify-content: center;
+
+    &:hover {
+      background: #f0f2f5;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .button2 {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+    border-radius: 1px;
+    justify-content: center;
+
+    &:hover {
+      background: #f0f2f5;
+    }
+  }
+
+  .tooltip {
+    padding: 12px 16px;
+    gap: 10px;
+    font-size: 16px;
+    color: white;
+    background: #59647a;
+    border-radius: 8px;
+
+    position: absolute;
+    top: 30px;
+    left: -200px;
+    z-index: 2;
+  }
+
+  .contextMenu {
+    position: absolute;
+    margin-left: 30px;
+    max-width: 320px;
+    gap: 16px;
+  }
+
+  .contentBlock {
+    min-width: 450px;
+    box-sizing: border-box;
+  }
+}

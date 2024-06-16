@@ -1,0 +1,25 @@
+.comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #59647a;
+
+  span {
+    color: #9aa1b0;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .commentText {
+    color: #59647a;
+    margin-left: 5px;
+  }
+}
+
+.radioText {
+  width: 704px;
+}

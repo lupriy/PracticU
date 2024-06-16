@@ -1,0 +1,44 @@
+.block {
+  display: flex;
+  gap: 20px;
+
+  .textarea {
+    border-radius: 8px;
+    border-color: #f0f2f5;
+    width: 600px;
+    padding: 5px;
+  }
+
+  .languageField {
+    width: 150px;
+  }
+}
+
+.codeBlock {
+  width: 872px;
+  background: #f0f2f5;
+  border-radius: 8px;
+  padding: 32px 64px;
+  position: relative;
+  margin-bottom: 32px;
+  margin-top: 16px;
+
+  .closeButton {
+    background: #59647a;
+    border-radius: 0px 8px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .editor {
+    background: #f0f2f5 !important;
+    padding: 0 !important;
+    margin: 0;
+  }
+}

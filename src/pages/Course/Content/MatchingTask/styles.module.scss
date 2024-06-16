@@ -1,0 +1,61 @@
+@import '../../../../shared/theme/colors.scss';
+
+.matching-task-item {
+  &:first-child {
+    margin-top: 32px;
+  }
+
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 26px;
+  }
+
+  & > .text {
+    width: 454px;
+
+    &-tablet {
+      width: 100%;
+    }
+  }
+
+  &-tablet {
+    flex-direction: column;
+  }
+}
+
+.select-menu-item {
+  width: 233px;
+
+  &-tablet {
+    width: 100%;
+  }
+}
+
+.answer {
+  margin-top: 12px;
+}
+
+.correct {
+  color: $clr-success;
+}
+
+.wrong {
+  color: $clr-error;
+}
+
+.list-edge {
+  left: -64px;
+
+  &-correct {
+    background-color: $clr-success;
+  }
+
+  &-wrong {
+    background-color: $clr-error;
+  }
+}

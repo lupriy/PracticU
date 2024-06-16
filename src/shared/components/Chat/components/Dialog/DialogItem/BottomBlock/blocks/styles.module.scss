@@ -1,0 +1,62 @@
+.statusBlock {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    &__resolve {
+      color: #11c262;
+    }
+
+    &__rejacte {
+      color: #da1b32;
+    }
+
+    &__awaited {
+      color: #eb5d18;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+
+  .text {
+    color: #eb5d18;
+    margin-left: 4px;
+    text-decoration: underline;
+  }
+}
+
+.button {
+  padding: 12px 20px;
+  height: 44px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  &__resolve {
+    background: #11c262;
+    border-color: #11c262;
+    margin-right: 8px;
+  }
+
+  &__rejacte {
+    background: #da1b32;
+    border-color: #da1b32;
+  }
+}

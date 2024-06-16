@@ -1,0 +1,15 @@
+@import '../../theme/colors.scss';
+
+$size: 22px;
+
+.wrapper {
+  min-width: $size;
+  min-height: $size;
+  border-radius: 50%;
+  background-color: $clr-brunoyam;
+  color: $clr-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}

@@ -1,0 +1,21 @@
+.block {
+  width: 100%;
+  height: calc(100% - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    width: 258px;
+    height: 32px;
+    background: #f0f2f5;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #59647a;
+  }
+}

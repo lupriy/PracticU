@@ -1,0 +1,11 @@
+.block {
+  width: calc(100% - 400px);
+
+  &__mobile {
+    width: 100%;
+
+    &__isNotVisible {
+      display: none;
+    }
+  }
+}

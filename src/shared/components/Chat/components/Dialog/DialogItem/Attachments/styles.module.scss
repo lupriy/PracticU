@@ -1,0 +1,23 @@
+.block {
+  margin: 12px 0 8px 0;
+
+  .item {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1e1e20;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__right {
+      color: white;
+
+      & > a {
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.block {
+  display: flex;
+
+  .message {
+    background: #f0f2f5;
+    border-radius: 12px 12px 12px 0px;
+    padding: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    margin: 0 24px 8px 0;
+    position: relative;
+    overflow: hidden;
+    max-width: 540px;
+    white-space: pre-wrap;
+
+    .text {
+      margin-right: 36px;
+    }
+
+    .time {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: #9aa1b0;
+    }
+  }
+
+  &__right {
+    justify-content: flex-end;
+
+    .message {
+      margin: 0 0 8px 24px;
+      background: #9aa1b0;
+      border-radius: 12px 12px 0px 12px;
+      color: #ffffff;
+
+      .time {
+        color: #f0f2f5;
+      }
+    }
+  }
+}

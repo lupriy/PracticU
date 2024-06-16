@@ -1,0 +1,12 @@
+.block {
+  padding: 28px 24px 20px 24px;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+
+  .content {
+    width: 100%;
+    max-width: 916px;
+  }
+}

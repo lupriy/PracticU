@@ -1,0 +1,185 @@
+@use '../../shared/theme/mixins.scss' as *;
+@import '../../shared/theme/colors.scss';
+
+@mixin padding-top {
+  padding-top: 40px;
+}
+
+.page-container {
+  @include page-container;
+  @include padding-top;
+
+  &-tablet {
+    @include page-container-tablet;
+    @include padding-top;
+  }
+
+  &-mobile {
+    @include page-container-mobile;
+    @include padding-top;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.button {
+  color: black;
+  border-color: black;
+  background-color: white;
+  text-transform: capitalize;
+
+  &-active {
+    color: white;
+    border-color: black;
+    background-color: black;
+  }
+
+  &:hover {
+    color: white;
+    border-color: black;
+    background-color: black;
+  }
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.course-card {
+  max-width: 728px;
+  min-height: 320px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 16px 4px 32px rgba(101, 104, 118, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+
+  &-text {
+    max-width: 516px;
+  }
+
+  &-mobile {
+    padding: 24px 16px;
+    min-height: 304px;
+  }
+
+  &-lesson-info {
+    color: $clr-grey4;
+  }
+
+  &-button {
+    margin-top: auto;
+    width: 243px;
+  }
+
+  &-background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+  }
+}
+
+.current-lesson {
+  margin-top: 24px;
+  width: 100%;
+
+  &-text {
+    max-width: 516px;
+  }
+
+  &-mobile {
+    padding: 24px 16px;
+    min-height: 304px;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  background-color: #59647a;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.popup {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    max-height: 686px;
+    background-color: #fff;
+    padding: 40px;
+    position: relative;
+  }
+
+  &-title {
+    margin-bottom: 32px;
+    font-size: 34px;
+    line-height: 46px;
+    font-weight: 700;
+  }
+
+  &-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    padding: 10px;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  &-field {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-button {
+    background-color: #d9d9d9;
+    pointer-events: none;
+    cursor: auto;
+
+    &-active {
+      background-color: #eb5d18;
+      cursor: pointer;
+      pointer-events: all;
+    }
+  }
+}

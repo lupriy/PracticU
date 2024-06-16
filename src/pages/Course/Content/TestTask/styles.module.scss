@@ -1,0 +1,38 @@
+@import '../../../../shared/theme/colors.scss';
+
+.form-control-label {
+  align-items: flex-start;
+  margin-top: 24px;
+  position: relative;
+
+  &:first-of-type {
+    margin-top: 32px;
+  }
+}
+
+.answer {
+  margin-top: 12px;
+}
+
+.correct {
+  color: $clr-success;
+}
+
+.wrong {
+  color: $clr-error;
+}
+
+.radio {
+  top: -6px;
+}
+
+.list-edge {
+  left: -54px;
+
+  &-correct {
+    background-color: $clr-success;
+  }
+  &-wrong {
+    background-color: $clr-error;
+  }
+}

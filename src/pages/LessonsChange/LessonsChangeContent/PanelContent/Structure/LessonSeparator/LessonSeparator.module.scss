@@ -1,0 +1,63 @@
+.separator {
+  position: relative;
+  margin-bottom: 48px;
+  width: 872px;
+  padding: 16px 64px;
+  background: #f9f9fa;
+  border-top: 2px dashed #9aa1b0;
+  border-bottom: 2px dashed #9aa1b0;
+
+  .editBtn {
+    top: -1px;
+    right: 37px;
+    padding: 8px 16px;
+    position: absolute;
+    background-color: #59647a;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+  }
+
+  .deleteBtn {
+    top: -1px;
+    border-radius: 0;
+  }
+
+  .btn {
+    top: -1px;
+    border-radius: 0;
+  }
+  .content {
+    h3 {
+      font-size: 20px;
+      line-height: 28px;
+      color: #59647a;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+      color: #59647a;
+    }
+
+    .button {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px 24px;
+      gap: 10px;
+      border-radius: 4px;
+      font-size: 18px;
+      color: white;
+
+      margin-top: 16px;
+      transition: all 0.1s ease-out;
+      border: none;
+      min-width: 130px;
+      box-sizing: content-box;
+
+      text-align: center;
+    }
+  }
+}

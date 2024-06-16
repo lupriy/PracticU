@@ -1,0 +1,33 @@
+$small: 320px;
+$middle: 600px;
+$large: 800px;
+
+@mixin mediaMobile {
+  @media (min-width: $small) and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin mediaMobileAndHigher {
+  @media (min-width: $small) {
+    @content;
+  }
+}
+
+@mixin mediaTablet {
+  @media (min-width: $middle) and (max-width: 799px) {
+    @content;
+  }
+}
+
+@mixin mediaTabletAndHigher {
+  @media (min-width: $middle) {
+    @content;
+  }
+}
+
+@mixin mediaDesktop {
+  @media (min-width: $large) {
+    @content;
+  }
+}

@@ -1,0 +1,20 @@
+@use '../../shared/theme/mixins.scss' as *;
+
+@mixin padding-top {
+  padding-top: 40px;
+}
+
+.page-container {
+  @include page-container;
+  padding: 0;
+
+  &-tablet {
+    @include page-container-tablet;
+    padding: 0;
+  }
+
+  &-mobile {
+    @include page-container-mobile;
+    padding: 0;
+  }
+}

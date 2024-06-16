@@ -1,0 +1,36 @@
+.block {
+  min-height: 61px;
+  background: #f0f2f5;
+  padding: 8px 24px;
+  display: flex;
+  align-items: flex-end;
+
+  .input {
+    resize: none;
+    padding: 12px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1e1e20;
+    height: 44px;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+
+  .buttonClip {
+    height: 24px;
+    width: 24px;
+    margin: 0 8px 10px 0;
+  }
+
+  .buttonSend {
+    height: 24px;
+    width: 24px;
+    margin: 0 0 10px 16px;
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}

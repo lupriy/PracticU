@@ -1,0 +1,2 @@
+export const MAX_PROGRESS_LINE_VALUE = 100;
+export const MIN_PROGRESS_LINE_VALUE = 0;

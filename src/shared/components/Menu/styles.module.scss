@@ -1,0 +1,10 @@
+@import '../../theme/colors.scss';
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 64px;
+  background-color: $clr-grey2;
+  cursor: pointer;
+}

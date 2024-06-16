@@ -1,0 +1,40 @@
+.block {
+  padding: 12px 75px;
+  background: #f0f2f5;
+  border-bottom: 1px solid #d9d9d9;
+
+  .item {
+    display: flex;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .photo {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+    }
+
+    .name {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      color: #1e1e20;
+    }
+
+    .size {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: #9aa1b0;
+    }
+
+    .button {
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
+    }
+  }
+}

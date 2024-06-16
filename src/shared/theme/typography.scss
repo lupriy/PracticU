@@ -1,0 +1,77 @@
+@mixin headers {
+  margin: 0;
+  color: $clr-black;
+}
+
+@mixin size($fs: 20px, $lh: 28px) {
+  font-size: $fs;
+  line-height: $lh;
+}
+
+* {
+  font-family: Closer !important;
+}
+
+h1 {
+  @include size(34px, 46px);
+  @include headers;
+}
+
+h2 {
+  @include size(28px, 40px);
+  @include headers;
+}
+
+h3 {
+  @include size(24px, 34px);
+  @include headers;
+}
+
+h4 {
+  @include size();
+  @include headers;
+}
+
+// TODO: Изменение стилей тегов может аффектить стили других библиотек,
+// возможно стоит убрать и написать компонент Text
+p {
+  @include size();
+}
+
+.size-l {
+  @include size();
+}
+
+.size-m {
+  @include size(18px, 26px);
+}
+
+.size-s {
+  @include size(16px, 22px);
+}
+
+.size-xs {
+  @include size(14px, 20px);
+}
+
+.size-xxs {
+  @include size(13px, 16px);
+}
+
+.size-xxxs {
+  @include size(12px, 14px);
+}
+
+@font-face {
+  font-family: 'Closer';
+  src: url('../../static/fonts/closer-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Closer';
+  src: url('../../static/fonts/closer-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}

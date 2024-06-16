@@ -1,0 +1,22 @@
+.panel {
+  padding: 8px;
+
+  .content {
+    display: flex;
+  }
+
+  & > div {
+    & > * {
+      border-right: 1px solid #d9d9d9;
+      padding: 0 8px;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
+.panelLink {
+  padding: 8px;
+}

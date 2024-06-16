@@ -1,0 +1,54 @@
+.photoContent {
+  position: relative;
+  margin-bottom: 32px;
+
+  .photo {
+    border-radius: 8px;
+    max-width: 872px;
+    //height: 488px;
+    height: auto;
+    //margin-left: -64px;
+    margin: 0 auto;
+
+    @media (max-width: 872px) {
+      width: 100%;
+    }
+  }
+
+  .button {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #59647a;
+    border-radius: 0 8px 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 0;
+
+    @media (max-width: 872px) {
+      right: 0;
+    }
+  }
+
+  .label {
+    text-align: center;
+    color: #9aa1b0;
+    cursor: pointer;
+    margin-top: 24px;
+    line-height: 20px;
+    font-size: 16px;
+
+    border: none;
+    outline: none;
+    width: 744px;
+
+    &:focus {
+      cursor: text;
+    }
+
+    @media (min-width: 872px) {
+      width: 872px;
+    }
+  }
+}

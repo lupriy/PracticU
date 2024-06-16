@@ -1,0 +1,10 @@
+export { AllCourses } from './AllCourses';
+export { AuthPage } from './AuthPage';
+export { Course } from './Course';
+export { Lessons } from './Lessons';
+export { LessonsChange } from './LessonsChange';
+export { MainPage } from './MainPage';
+export { Modules } from './Modules';
+export { MyMentors } from './MyMentors';
+export { MyStudents } from './MyStudents';
+export { Profile } from './Profile';

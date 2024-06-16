@@ -1,0 +1,19 @@
+.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+
+  &__approved {
+    background: #11c262;
+  }
+
+  &__rejacted {
+    background: #da1b32;
+  }
+
+  &__awaited {
+    background: #eb5d18;
+  }
+}

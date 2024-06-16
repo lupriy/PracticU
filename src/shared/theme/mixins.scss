@@ -1,0 +1,15 @@
+@use '../constants/variables.scss' as *;
+
+@mixin page-container {
+  width: calc(100% - $aside-width);
+  transform: translate($aside-width);
+  padding: 16px $page-container-side-margin $page-container-side-margin;
+}
+
+@mixin page-container-tablet {
+  padding: 16px $page-container-side-margin $page-container-side-margin;
+}
+
+@mixin page-container-mobile {
+  padding: 16px 16px;
+}

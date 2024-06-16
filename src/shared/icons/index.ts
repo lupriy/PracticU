@@ -1,0 +1,16 @@
+export { Triangles } from './triangles';
+export { Circles } from './circles';
+export { Diamonds } from './diamonds';
+export { Hexagons } from './hexagons';
+export { Squares } from './squares';
+export { CheckMark } from './checkMark';
+export { Padlock } from './padlock';
+export { ReactComponent as GraduationCapIcon } from './graduationCap.svg';
+export { ReactComponent as BlocksIcon } from './blocks.svg';
+export { ReactComponent as DialogIcon } from './dialog.svg';
+export { ReactComponent as CloseIcon } from './close.svg';
+export { ReactComponent as LogoIcon } from './logo.svg';
+export { ReactComponent as MyStudentsIcon } from './readingBookIcon.svg';
+export { ReactComponent as ChevronIcon } from './chevron.svg';
+export { Delete } from './delete';
+export { Duplicate } from './duplicate';

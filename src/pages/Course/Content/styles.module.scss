@@ -1,0 +1,225 @@
+@import '../../../shared/theme/colors.scss';
+@import '../../../shared/theme/typography.scss';
+
+$min-container-margin: 16px;
+
+@mixin tight {
+  max-width: 744px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tight {
+  @include tight;
+}
+
+.wrapper {
+  margin: auto;
+  margin-top: 48px;
+  max-width: 872px;
+  padding: 0 16px;
+  box-sizing: content-box;
+}
+
+.task-buttons {
+  margin-top: 32px;
+  display: flex;
+  gap: 24px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0;
+
+  &-centered {
+    justify-content: center;
+  }
+
+  &-mobile {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.lesson-info {
+  @include tight;
+  margin-top: 48px;
+}
+
+.text-block {
+  max-width: 744px;
+  @include tight;
+  margin: 24px auto;
+  position: relative;
+}
+
+.with-border {
+  border-radius: 8px;
+  padding: 48px 64px;
+  border: 1px solid $clr-grey3;
+
+  // TODO: Разобраться, почему рендериться лишний section внутри section with border
+  & > section > :first-child {
+    margin-top: 0;
+  }
+
+  &-mobile {
+    padding: 16px;
+    position: relative;
+    left: -16px;
+    width: 100vw;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.important {
+  border-width: 4px;
+  border-style: solid;
+  width: 100%;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  &-mobile {
+    padding: 16px;
+    border-width: 4px;
+  }
+}
+
+.header {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  @include tight;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.markdown {
+  max-width: 744px;
+
+  &-li {
+    padding-top: 0;
+    padding-bottom: 10px;
+    margin-left: 30px;
+    @include size();
+
+    &:not(:first-of-type) {
+      padding: 10px 0;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    & > p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &-img {
+    margin: auto;
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    max-width: 872px;
+
+    // TODO: Подумать над адаптивами картинок
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+
+    &-caption {
+      text-align: center;
+      color: #9aa1b0;
+      margin-top: 4px;
+      line-height: 20px;
+      font-size: 16px;
+    }
+  }
+
+  &-p {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  &-h2 {
+    margin: 16px 0;
+  }
+
+  // TODO: Добавить темизацию
+  &-a {
+    border-bottom: 2px solid $clr-rose;
+
+    &:hover {
+      color: $clr-rose;
+    }
+  }
+
+  &-code {
+    display: inline-block;
+    font-family: monospace !important;
+    width: fit-content;
+    /* Рандомный цвет, пока нет макета под code элемент */
+    background-color: #eff8f0;
+    margin: 8px 0;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
+}
+
+// THEMES
+
+.themeBlue {
+  border-color: $clr-blue;
+}
+
+.themeBrunoyam {
+  border-color: $clr-brunoyam;
+}
+
+.themeChartreuse {
+  border-color: $clr-chartreuse;
+}
+
+.themeRose {
+  border-color: $clr-rose;
+}
+
+.themeViolet {
+  border-color: $clr-violet;
+}
+
+.themeYellow {
+  border-color: $clr-yellow;
+}
+
+.separator {
+  margin: 0 auto;
+}
+
+.codeBlock {
+  background: #f0f2f5 !important;
+  padding: 32px 64px !important;
+  border-radius: 8px;
+}
+
+.loader {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+}
+

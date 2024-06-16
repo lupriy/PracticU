@@ -1,0 +1,1 @@
+export { NotificationNewMessage } from './NotificationNewMessage';

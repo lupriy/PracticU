@@ -1,0 +1,25 @@
+.block {
+  padding: 48px 64px;
+  width: 872px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 48px;
+
+  .title {
+    height: 40px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 8px;
+
+    &::placeholder {
+      color: #c1c4cb;
+    }
+  }
+
+  .singleChoice {
+    margin-top: 32px;
+  }
+}

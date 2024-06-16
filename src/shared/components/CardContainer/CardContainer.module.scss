@@ -1,0 +1,109 @@
+.block {
+  padding: 32px 16px;
+
+  @media (min-width: 800px) {
+    margin-left: 240px;
+    padding: 35px 48px 64px 48px;
+  }
+  //240px;
+
+  .buttonBack {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1e1e20;
+    margin-bottom: 8px;
+    display: flex;
+    cursor: pointer;
+    width: fit-content;
+
+    & > svg {
+      margin-right: 8px;
+    }
+  }
+
+  .topRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    align-items: center;
+
+    .title {
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 46px;
+      color: #1e1e20;
+    }
+
+    .addedButton {
+      width: 56px;
+      height: 56px;
+      background: #59647a;
+      border: 1px solid #59647a;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  .des {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 32px;
+    display: inline-flex;
+  }
+
+  .secondRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+
+    .hours {
+      font-size: 18px;
+      line-height: 24px;
+      color: #000000;
+      margin-left: 24px;
+    }
+
+    .price {
+      margin-left: 16px;
+      font-size: 18px;
+      line-height: 24px;
+      color: #000000;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+.tag {
+  padding: 4px 8px;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 2px;
+  color: white;
+
+  &-marketing {
+    background-color: #a651b4;
+  }
+  &-programming {
+    background-color: #db5b73;
+  }
+  &-design {
+    background-color: #2c77e7;
+  }
+  &-analytics {
+    background-color: #cfd923;
+  }
+  &-softskills {
+    background-color: #f8c456;
+  }
+}

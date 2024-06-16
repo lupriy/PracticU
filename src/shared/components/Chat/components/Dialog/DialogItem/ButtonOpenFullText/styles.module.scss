@@ -1,0 +1,14 @@
+.block {
+  position: absolute;
+  width: calc(100% - 32px);
+  bottom: 2px;
+  display: flex;
+  justify-content: center;
+
+  .button {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9aa1b0;
+  }
+}

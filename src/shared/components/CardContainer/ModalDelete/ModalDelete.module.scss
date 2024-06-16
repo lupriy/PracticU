@@ -1,0 +1,63 @@
+.modal {
+  padding: 40px;
+  width: 500px;
+  height: 270px;
+  left: 470px;
+  top: 120px;
+  background: #ffffff;
+  cursor: default;
+
+  .title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    color: #1e1e20;
+    margin-bottom: 16px;
+  }
+
+  .desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1e1e20;
+    margin-bottom: 32px;
+  }
+
+  .lineButtons {
+    display: flex;
+
+    .buttonSave {
+      width: 158px;
+      height: 56px;
+      background: #eb5d18;
+      border: 1px solid #eb5d18;
+      border-radius: 4px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-right: 16px;
+    }
+
+    .button {
+      width: 118px;
+      height: 56px;
+      background: #ffffff;
+      border: 1px solid #eb5d18;
+      border-radius: 4px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-right: 16px;
+    }
+  }
+}

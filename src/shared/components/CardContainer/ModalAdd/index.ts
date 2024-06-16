@@ -1,0 +1,1 @@
+export { ModalAdd } from './ModalAdd';

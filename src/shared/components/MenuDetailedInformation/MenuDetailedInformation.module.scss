@@ -1,0 +1,65 @@
+.button {
+  position: absolute;
+  background: #f0f2f5;
+  width: 64px;
+  height: 64px;
+
+  @media (max-width: 800px) {
+    border-bottom: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+  }
+}
+
+.buttonBack {
+  position: absolute;
+  margin: 22px 0 0 112px;
+  display: flex;
+  align-items: center;
+
+  & > span {
+    margin-left: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #59647a;
+  }
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+
+  .menu {
+    width: 513px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: #f0f2f5;
+    box-shadow: 16px 4px 32px rgba(101, 104, 118, 0.3);
+    cursor: default;
+    padding: 24px;
+    color: #1e1e20;
+    overflow-y: auto;
+    position: relative;
+    z-index: 900;
+
+    @media (max-width: 513px) {
+      width: 100%;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 40px;
+      margin-bottom: 16px;
+    }
+  }
+}

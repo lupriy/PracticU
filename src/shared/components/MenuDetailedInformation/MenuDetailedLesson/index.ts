@@ -1,0 +1,1 @@
+export { MenuDetailedLesson } from './MenuDetailedLesson';

@@ -1,0 +1,1 @@
+export const EXTRA_SPACE_IN_MOBILE_MODE = 64;

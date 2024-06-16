@@ -1,0 +1,50 @@
+.block {
+  padding: 48px 64px;
+  width: 872px;
+  background: #ffffff;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 48px;
+  box-sizing: border-box;
+
+  .deleteButton {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #59647a;
+    border-radius: 0 8px 0 0;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    padding: 6px 0;
+  }
+
+  .title {
+    width: 100%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    border: none;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+      color: #c1c4cb;
+    }
+  }
+
+  .description {
+    width: 100%;
+    height: 28px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    border: none;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+      color: #9aa1b0;
+    }
+  }
+}

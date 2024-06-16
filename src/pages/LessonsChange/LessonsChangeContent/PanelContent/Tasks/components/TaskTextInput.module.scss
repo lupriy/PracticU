@@ -1,0 +1,14 @@
+.description {
+  width: 100%;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  border: none;
+  outline: none;
+  resize: none;
+  display: flex;
+
+  &::placeholder {
+    color: #9aa1b0;
+  }
+}

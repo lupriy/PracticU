@@ -1,0 +1,72 @@
+@import '../../shared/theme/mediaQuery.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 16px;
+}
+
+.header {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 728px;
+  width: 100%;
+  min-height: 438px;
+  margin-top: 80px;
+  border-radius: 8px;
+
+  @include mediaTabletAndHigher {
+    box-shadow: -8px -8px 16px rgba(101, 104, 118, 0.1),
+      8px 8px 16px rgba(101, 104, 118, 0.1);
+    padding: 40px 16px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 32px 0;
+  width: 352px;
+
+  @include mediaMobile {
+    width: 100%;
+  }
+}
+
+.input {
+  width: 100%;
+}
+
+.error {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  background: rgba(218, 27, 50, 0.1);
+  color: #da1b32;
+  border-radius: 1px;
+}
+
+.button {
+  margin-top: 8px;
+  width: 105px;
+
+  @include mediaMobile {
+    width: 100%;
+    margin-top: 0;
+  }
+}

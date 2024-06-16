@@ -1,0 +1,36 @@
+.approve {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 88px;
+  right: 173px;
+
+  & > p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #11c262;
+    margin-left: 8px;
+  }
+}
+
+.reject {
+  position: absolute;
+  width: 446px;
+  height: 104px;
+  background: #fbe8ea;
+  border-radius: 1px;
+  display: flex;
+  padding: 16px 36px 16px 24px;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+
+  & > p {
+    margin-left: 16px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #da1b32;
+  }
+}

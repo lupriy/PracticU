@@ -1,0 +1,155 @@
+@import '../../../../shared/theme/colors.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+  min-height: 280px;
+  padding: 24px 32px;
+  border: 1px solid $clr-grey3;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+
+  &-marketing {
+    background: url('../../../../static/images/marketing_bg.png') right /
+      contain no-repeat;
+  }
+
+  &-programming {
+    background: url('../../../../static/images/programming_bg.png') right /
+      contain no-repeat;
+  }
+
+  &-design {
+    background: url('../../../../static/images/design_bg.png') right / contain
+      no-repeat;
+  }
+
+  &-office {
+    background: url('../../../../static/images/office_bg.png') right / contain
+      no-repeat;
+  }
+
+  &:hover .actions {
+    visibility: visible;
+  }
+
+  &__isNotManager {
+    &:hover .actions {
+      display: none;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.title {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.desc {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tag {
+  padding: 4px 8px;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 2px;
+  color: white;
+  text-transform: capitalize;
+
+  &-marketing {
+    background-color: #a651b4;
+  }
+  &-programming {
+    background-color: #db5b73;
+  }
+  &-design {
+    background-color: #2c77e7;
+  }
+  &-analytics {
+    background-color: #cfd923;
+  }
+  &-softskills {
+    background-color: #f8c456;
+  }
+}
+
+.lesson-info {
+  color: $clr-grey4;
+}
+
+.button {
+  margin-top: auto;
+  width: 243px;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
+
+.info {
+  font-size: 18px;
+  line-height: 24px;
+
+  &-value {
+    font-weight: 700;
+  }
+
+  &-text {
+    font-weight: 400;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  visibility: hidden;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+
+  &-item {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    background-color: #59647a;
+
+    &:not(:last-child) {
+      margin-right: 1px;
+    }
+
+    &:last-child {
+      border-radius: 0 8px 0 0;
+    }
+  }
+}

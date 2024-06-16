@@ -1,0 +1,46 @@
+@import '../../../../../shared/theme/colors.scss';
+
+.input {
+  display: none;
+
+  &-wrapper {
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+    cursor: pointer;
+  }
+}
+
+.preview {
+  width: 40px;
+  height: 40px;
+}
+
+.file {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+
+  &-name {
+    font-weight: bold;
+
+    &-wrapper {
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+  &-size {
+    color: $clr-grey4;
+  }
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}

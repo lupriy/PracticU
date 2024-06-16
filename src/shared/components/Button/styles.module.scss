@@ -1,0 +1,74 @@
+@import '../../theme/colors';
+
+@mixin transition($clr, $clr-hover) {
+  background-color: $clr;
+  border: 1px solid $clr;
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: $clr-hover;
+    border: 1px solid $clr-hover;
+  }
+}
+
+.button {
+  padding: 16px 24px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.text {
+  color: $clr-white;
+}
+
+.brunoyam,
+.themeBrunoyam {
+  @include transition($clr-brunoyam, $clr-brunoyam-hover);
+}
+
+.blue,
+.themeBlue {
+  @include transition($clr-blue, $clr-blue-hover);
+}
+
+.chartreuse,
+.themeChartreuse,
+.themeСhartreuse {
+  @include transition($clr-chartreuse, $clr-chartreuse-hover);
+}
+
+.rose,
+.themeRose {
+  @include transition($clr-rose, $clr-rose-hover);
+}
+
+.violet,
+.themeViolet {
+  @include transition($clr-violet, $clr-violet-hover);
+}
+
+.yellow,
+.themeYellow {
+  @include transition($clr-yellow, $clr-yellow-hover);
+}
+
+.white {
+  background-color: $clr-white;
+}
+
+.disabled {
+  @include transition($clr-grey3, $clr-grey3);
+}
+
+.success {
+  background-color: $clr-success;
+}
+
+.error {
+  background-color: $clr-error;
+}

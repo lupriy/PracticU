@@ -1,0 +1,14 @@
+@import '../../theme/colors.scss';
+
+.header {
+  border-bottom: 1px solid $clr-grey3;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &-grey {
+    background-color: $clr-grey2;
+    justify-content: space-between;
+  }
+}

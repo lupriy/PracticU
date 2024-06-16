@@ -1,0 +1,111 @@
+@import '../../../../shared/theme/colors.scss';
+
+$close-icon-margin: 24px;
+$gap-between-titles: 16px;
+$clr-black: #1e1e20;
+
+.menu {
+  height: 100vh;
+  background-color: #f0f2f5;
+  position: fixed;
+  z-index: 100;
+  box-shadow: 16px 4px 32px rgba(101, 104, 118, 0.3);
+  padding: 24px;
+  overflow: auto;
+  top: 0;
+  width: 475px;
+
+  .close {
+    position: absolute;
+    top: $close-icon-margin;
+    right: $close-icon-margin;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &-mobile {
+    width: 100%;
+  }
+}
+
+.lessons-list {
+  list-style-position: inside;
+  margin-left: 16px;
+  color: $clr-black;
+}
+
+.module-item {
+  list-style-type: none;
+  margin-top: $gap-between-titles;
+}
+
+.module-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  color: $clr-black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.module-name {
+  font-size: 16px;
+}
+
+.module-lessons-total {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.module-lessons-total-count {
+  white-space: 'nowrap';
+  width: 48px;
+}
+
+.title {
+  margin-top: 32px;
+  font-size: 28px;
+  color: $clr-black;
+}
+
+.lesson-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $gap-between-titles;
+  font-weight: bold;
+  cursor: pointer;
+
+  position: relative;
+
+  .edge {
+    left: -40px;
+  }
+}
+
+.pointer {
+  color: $clr-rose;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.list {
+  position: relative;
+  width: 100%;
+}
+
+.closed {
+  color: $clr-grey4;
+  cursor: default;
+}
+
+.logo {
+  cursor: pointer;
+}

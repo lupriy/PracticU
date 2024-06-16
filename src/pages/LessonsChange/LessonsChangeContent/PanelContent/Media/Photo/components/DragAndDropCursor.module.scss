@@ -1,0 +1,22 @@
+.cursor {
+  cursor: grab;
+  width: 65px;
+  height: 40px;
+  background-color: #eb5d18;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+
+  .count {
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+  }
+
+  &:hover {
+    cursor: grabbing;
+  }
+}

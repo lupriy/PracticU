@@ -1,0 +1,20 @@
+@import '../../../../shared/theme/mediaQuery.scss';
+
+$video-width: 872px;
+$video-height: 488px;
+$vw: 90vw;
+
+.video {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  &-player {
+    border-radius: 8px;
+    width: $vw;
+    height: calc($vw / ($video-width / $video-height));
+    max-width: $video-width;
+    max-height: $video-height;
+  }
+}

@@ -1,0 +1,242 @@
+image: "node:16"
+
+stages:
+  - test
+  - build
+  - deploy
+
+test:build:
+  stage: test
+  only:
+    - merge_requests
+  tags:
+    - "${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}-frontend"
+  cache:
+    - key:
+        files:
+          - package-lock.json
+          - package.json
+      paths:
+        - node_modules/
+        - .npm
+  before_script:
+    - npm install --cache ".npm"
+  script:
+    - if [[ "${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}" == "staging" ]]; then
+    -   API_URL="${API_URL_STAGING}";
+    -   WEBSOCKET_EVENTS_URL="${WEBSOCKET_EVENTS_URL_STAGING}";
+    - elif [[ "${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}" == "production" ]]; then
+    -   API_URL="${API_URL_PRODUCTION}";
+    -   WEBSOCKET_EVENTS_URL="${WEBSOCKET_EVENTS_URL_PRODUCTION}"
+    - else
+    -   exit 1
+    - fi
+    - CI=false
+      REACT_APP_API_URL="${API_URL}"
+      REACT_APP_WEBSOCKET_EVENTS_URL="${WEBSOCKET_EVENTS_URL}"
+      npm run build
+
+test:lint:
+  stage: test
+  only:
+    - merge_requests
+  tags:
+    - "${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}-frontend"
+  cache:
+    - key:
+        files:
+          - package-lock.json
+          - package.json
+      paths:
+        - node_modules/
+        - .npm
+  before_script:
+    - npm install --cache ".npm"
+  script:
+    - CI=false npm run lint
+
+test:schema:
+  stage: test
+  only:
+    - merge_requests
+  tags:
+    - "${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}-frontend"
+  cache:
+    - key:
+        files:
+          - package-lock.json
+          - package.json
+      paths:
+        - node_modules/
+        - .npm
+  before_script:
+    - npm install --cache ".npm"
+  script:
+    - if [[ "${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}" == "staging" ]]; then
+    -   API_URL="${API_URL_STAGING}";
+    -   EVENTS_SCHEMA_URL="${EVENTS_SCHEMA_URL_STAGING}";
+    - elif [[ "${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}" == "production" ]]; then
+    -   API_URL="${API_URL_PRODUCTION}";
+    -   EVENTS_SCHEMA_URL="${EVENTS_SCHEMA_URL_PRODUCTION}";
+    - else
+    -   exit 1
+    - fi
+    - mkdir ./tmp
+    - mkdir ./tmp/lesson-content
+    - mkdir ./tmp/websockets-events
+    - cp -rf ./src/api/templates/ ./tmp/templates/
+
+    - curl -L "${API_URL}/schema/json/" -o ./tmp/openapi.json
+    - diff -s ./tmp/openapi.json ./src/api/openapi.json
+    
+    - curl -L "${API_URL}/lesson/schema/" -o ./tmp/lesson-content/schema.json
+    - diff -s ./tmp/lesson-content/schema.json ./src/api/lesson-content/schema.json
+
+    - curl -L "${EVENTS_SCHEMA_URL}" -o ./tmp/websockets-events/schema.json
+    - diff -s ./tmp/websockets-events/schema.json ./src/api/websockets-events/schema.json
+
+    - npx swagger-typescript-api -p ./tmp/openapi.json -o ./tmp/ -n index -t ./tmp/templates/
+    - diff -s ./tmp/index.ts ./src/api/index.ts
+    
+    - npx json2ts ./tmp/lesson-content/schema.json > ./tmp/lesson-content/lessonContentType.ts
+    - diff -s
+      ./tmp/lesson-content/lessonContentType.ts ./src/api/lesson-content/lessonContentType.ts
+
+    - npx json2ts ./tmp/websockets-events/schema.json >
+      ./tmp/websockets-events/websocketsEvents.ts
+    - diff -s
+      ./tmp/websockets-events/websocketsEvents.ts
+      ./src/api/websockets-events/websocketsEvents.ts
+
+test:test:
+  stage: test
+  only:
+    - merge_requests
+  tags:
+    - "${CI_MERGE_REQUEST_TARGET_BRANCH_NAME}-frontend"
+  cache:
+    - key:
+        files:
+          - package-lock.json
+          - package.json
+      paths:
+        - node_modules/
+        - .npm
+  before_script:
+    - npm install --cache ".npm"
+  script:
+    - CI=false npm run test
+
+build:build:dev:
+  stage: build
+  only:
+    - merge_requests
+  when: manual
+  tags:
+    - "dev-frontend"
+  artifacts:
+    paths:
+      - build/
+  cache:
+    - key:
+        files:
+          - package-lock.json
+          - package.json
+      paths:
+        - node_modules/
+        - .npm
+  before_script:
+    - npm install --cache ".npm"
+  script:
+    - API_URL="${API_URL_DEV}";
+    - WEBSOCKET_EVENTS_URL="${WEBSOCKET_EVENTS_URL_DEV}";
+    - CI=false
+      REACT_APP_API_URL="${API_URL}"
+      REACT_APP_WEBSOCKET_EVENTS_URL="${WEBSOCKET_EVENTS_URL}"
+      npm run build
+
+build:build:staging:
+  stage: build
+  only:
+    - staging
+  tags:
+    - "staging-frontend"
+  artifacts:
+    paths:
+      - build/
+  cache:
+    - key:
+        files:
+          - package-lock.json
+          - package.json
+      paths:
+        - node_modules/
+        - .npm
+  before_script:
+    - npm install --cache ".npm"
+  script:
+    - API_URL="${API_URL_STAGING}";
+    - WEBSOCKET_EVENTS_URL="${WEBSOCKET_EVENTS_URL_STAGING}";
+    - CI=false
+      REACT_APP_API_URL="${API_URL}"
+      REACT_APP_WEBSOCKET_EVENTS_URL="${WEBSOCKET_EVENTS_URL}"
+      npm run build
+
+build:build:production:
+  stage: build
+  only:
+    - production
+  tags:
+    - "production-frontend"
+  artifacts:
+    paths:
+      - build/
+  cache:
+    - key:
+        files:
+          - package-lock.json
+          - package.json
+      paths:
+        - node_modules/
+        - .npm
+  before_script:
+    - npm install --cache ".npm"
+  script:
+    - API_URL="${API_URL_PRODUCTION}";
+    - WEBSOCKET_EVENTS_URL="${WEBSOCKET_EVENTS_URL_PRODUCTION}";
+    - CI=false
+      REACT_APP_API_URL="${API_URL}"
+      REACT_APP_WEBSOCKET_EVENTS_URL="${WEBSOCKET_EVENTS_URL}"
+      npm run build
+
+deploy:deploy:dev:
+  stage: deploy
+  only:
+    - merge_requests
+  needs:
+    - "build:build:dev"
+  tags:
+    - "dev-frontend"
+  script:
+    - rm -rf /var/www/html/*
+    - cp -r build/* /var/www/html/
+
+deploy:deploy:staging:
+  stage: deploy
+  only:
+    - staging
+  tags:
+    - "staging-frontend"
+  script:
+    - rm -rf /var/www/html/*
+    - cp -r build/* /var/www/html/
+
+deploy:deploy:production:
+  stage: deploy
+  only:
+    - production
+  tags:
+    - "production-frontend"
+  script:
+    - rm -rf /var/www/html/*
+    - cp -r build/* /var/www/html/

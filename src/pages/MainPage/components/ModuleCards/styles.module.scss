@@ -1,0 +1,84 @@
+@import 'shared/theme/colors.scss';
+
+$number-size: 130px;
+$padding: 24px;
+
+.card {
+  width: 352px;
+  min-height: 258px;
+  box-shadow: 16px 4px 32px rgba(101, 104, 118, 0.3);
+  border-radius: 8px;
+  padding: $padding $padding 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 16px 4px 32px rgba(101, 104, 118, 0.45);
+  }
+
+  &-mobile {
+    padding: 16px;
+    min-height: 156px;
+    width: 100%;
+  }
+}
+
+.number {
+  width: $number-size;
+  height: $number-size;
+  color: #eaeef1;
+  font-size: 100px;
+  font-weight: bold;
+  position: absolute;
+  right: $padding;
+  bottom: 0;
+  z-index: -1;
+  user-select: none;
+
+  &-mobile {
+    color: $clr-grey4;
+  }
+}
+
+.text {
+  margin-top: 8px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.clickable {
+  user-select: none;
+  cursor: pointer;
+}
+
+.progress {
+  margin-top: auto;
+
+  &-text {
+    // color: $clr-rose;
+    font-weight: bold;
+  }
+
+  &-bar {
+    width: 100%;
+    height: 2px;
+
+    &-wrapper {
+      display: flex;
+      gap: 4px;
+      margin-top: 15px;
+    }
+  }
+}

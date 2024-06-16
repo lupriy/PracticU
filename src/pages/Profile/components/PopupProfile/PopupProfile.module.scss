@@ -1,0 +1,60 @@
+.popup {
+  width: 448px;
+  padding: 24px;
+  box-sizing: border-box;
+  margin: auto;
+  background: white;
+  margin-top: 5%;
+
+  .close {
+    float: right;
+    cursor: pointer;
+  }
+
+  .imgWrapper {
+    overflow: hidden;
+    position: relative;
+    margin: 24px 0 11px 0;
+
+    @media (max-width: 460px) {
+      padding: unset;
+    }
+
+    .image {
+      position: absolute;
+      max-width: 100%;
+      display: block;
+    }
+
+    .layerTop {
+      position: relative;
+      width: 384px;
+      height: 384px;
+      margin: 5px auto;
+      border-radius: 50%;
+      box-shadow: 0 0 0 150px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+
+    .button {
+      width: 32px;
+      height: 32px;
+      background: #f0f2f5;
+      border-radius: 4px;
+    }
+
+    .slider {
+      width: 320px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    width: 100%;
+    padding: 16px;
+  }
+}
